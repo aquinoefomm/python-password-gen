@@ -21,19 +21,17 @@ for c in range(1, nr_letters + 1):
     for index in range(0, nr_letters):
         i = random.randint(0, len(letters) - 1)
     chosen_letters.append(letters[i])
-# print(chosen_letters)
-
+print(chosen_letters)
 for c in range(1, nr_symbols + 1):
     for index in range(0, nr_symbols):
         i = random.randint(0, len(symbols) - 1)
     chosen_symbols.append(symbols[i])
-# print(chosen_symbols)
-
+print(chosen_symbols)
 for c in range(1, nr_numbers + 1):
     for index in range(0, nr_numbers):
         i = random.randint(0, len(numbers) - 1)
     chosen_numbers.append(numbers[i])
-# print(chosen_numbers)
+print(chosen_numbers)
 
 for l in chosen_letters:
     chosen_chars.append(l)
@@ -41,13 +39,13 @@ for s in chosen_symbols:
     chosen_chars.append(s)
 for n in chosen_numbers:
     chosen_chars.append(n)
+print(chosen_chars)
 
-# print(chosen_chars)
 random.shuffle(chosen_chars)
 
-gen_password=""
-for c in chosen_chars:
-    gen_password += c
+gen_password = ''.join(chosen_chars)
+# for c in chosen_chars:
+#     gen_password += c
 print(f'This is your password: {gen_password}')
 
 
